@@ -47,6 +47,17 @@ sudo sysctl -a | grep fs.protected
 ```
 You should see that hardlinks and softlinks are set to 1.
 
+That completes Greengrass prep. Later in the lab we need to create lambda that will run locally on the Greengrass. That lambda needs some libraries. We will install those libraries on the device as below. On SSH window type commands below
+
+```
+pip install jmespath
+
+pip install python-dateutil
+
+sudo  apt-get install python-opencv
+```
+
+
 ### Step 2 - Setting up the Greengrass Group
 Next we’re going to set up the Greengrass group and we’re going to be using the AWS IoT Console to complete these steps. The group is how we control which devices can communicate with core as well as the available Lambdas and logging options.
 
