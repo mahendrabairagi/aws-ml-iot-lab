@@ -88,7 +88,7 @@ Once back in the SageMaker console, select the "Notebook" tab from the sidebar o
 
 ![Alt text](../screenshots/notebook_dashboard_1.png)
 
-You'll be redirected to the notebook instance, and will land in the jupyter notebook dashboard. From here, you can navigate through your local filesystem, open and edit notebooks, text files, terminals, etc. By default, you'll have two directories: "lost+found" and "sample-notebooks", the latter of which contains a litany of examples for building, training, and deploying algorithms on SageMaker.
+You'll be redirected to the notebook instance, and will land in the jupyter notebook dashboard. From here, you can navigate through your local filesystem, open and edit notebooks, text files, terminals, etc. By default, you'll have one directory: "lost+found", the latter of which contains a litany of examples for building, training, and deploying algorithms on SageMaker.
 
 The "New" tab on the top right can be used to create new files, as well as open up a terminal window through the dashboard. We need to clone a github repository, so let's open up a new terminal:
 
