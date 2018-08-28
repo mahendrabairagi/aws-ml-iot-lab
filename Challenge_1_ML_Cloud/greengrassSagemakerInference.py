@@ -46,7 +46,7 @@ def greengrassSagemakerInference_run():
 
     response = runtime.invoke_endpoint(EndpointName=endpoint_name,ContentType='application/jsonlines', Body=image)
     result = response['Body'].read()
-    client.publish(topic='ModelInference', payload=result)
+    client.publish(topic='ModelInference', payload="success")
     # Asynchronously schedule this function to be run again in 5 seconds
     Timer(5, greengrassSagemakerInference_run).start()
     
