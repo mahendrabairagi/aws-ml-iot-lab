@@ -77,11 +77,9 @@ Rename xxxxxxx-private.pem.key to MLandIoT_core.pem.key
 
 It is recommended that you create a working directory to keep all of your files in one place. 
 Next, let’s download the Greengrass software for our device:
-Select the x86_64 software package and click the download button.
+Select the x86_64 Ubuntu 14.04 - 16.04 software package and click the download button.
  
-Download all certificates
-
-Download Greengrass Core software software (Download Greengrass version 1.5.0, choose x86_64)
+Download Greengrass Core software software
 
 You can now click the Finish button. You will see the following un-deployed group ready for the next steps.
 
@@ -121,14 +119,14 @@ Pick our service role, MLandIoTCoreRole and click Save
 We can set up logging so that all logs on the Greengrass core are sent to CloudWatch logs. This includes the logs from the operation of the core as well as the logs from our Lambda functions which are extremely useful to have.
 
 
-Under CloudWatch logs configuration click Edit
+Under "Setting" select CloudWatch logs configuration click Edit
 
 Click on Add another log type
 
  
 Select User Lambdas and Greengrass system
 
-Click Update
+Click Save
 
  
 Keep the log settings as Informational
@@ -138,7 +136,7 @@ Click Save
 
 ### Step 5 - Set up the core endpoints
 
-To be able to connect to Greengrass devices need to have an endpoint. This can be obtained automatically but currently that is only supported in the C++ SDK. For our workshop we need to define a known endpoint to use in test applications.
+To be able to connect to Greengrass devices need to have an endpoint. For our workshop we need to define a known endpoint to use in test applications.
 
 While on the settings page for your Group look for the Core connectivity information section
 
@@ -170,7 +168,7 @@ We will now copy the following to your Upsquared Device :
 
 MLandIoT_core.pem.crt and MLandIoT_core.pem.key file to your home folder which is: /home/upsquared
 
-Copy the Greengrass software (greengrass-ubuntu-x86-64-1.5.0.tar) file to /home/upsquared/
+Copy the Greengrass software (greengrass-ubuntu-x86-64-1.6.0.tar) file to /home/upsquared/
 
 on your local machine, open terminal, change directory to where certs folder is. You can use SCP as below to copy certs and software to the upsquared device
 
@@ -180,7 +178,7 @@ replace your_device_ip to the IP address of the device. You can get IP address o
 scp MLandIoT_core.cert.pem  upsquared@your_device_ip:/home/upsquared/
 scp MLandIoT_core.private.key  upsquared@your_device_ip:/home/upsquared/
 
-scp greengrass-ubuntu-x86-64-1.5.0.tar upsquared@your_device_ip:/home/upsquared
+scp greengrass-ubuntu-x86-64-1.6.0.tar upsquared@your_device_ip:/home/upsquared
 ```
 
 When asked for a password use “upsquared”, 
@@ -189,16 +187,16 @@ Windows users can use Filezilla to transfer certs and installation software.
 
 On the Device terminal extract the tar.gz file to the root of your device.
 
-if name of the software is greengrass-ubuntu-x86-64-1.5.0.tar (notice extension is .tar) then
+if name of the software is greengrass-ubuntu-x86-64-1.6.0.tar (notice extension is .tar) then
 
 ```
-sudo tar -xvf ./greengrass-ubuntu-x86-64-1.5.0.tar -C /
+sudo tar -xvf ./greengrass-ubuntu-x86-64-1.6.0.tar -C /
 ```
 
-if name of the software is greengrass-ubuntu-x86-64-1.5.0.tar.gz (notice extension is .gz) then
+if name of the software is greengrass-ubuntu-x86-64-1.6.0.tar.gz (notice extension is .gz) then
 
 ```
-sudo tar -zxvf greengrass-ubuntu-x86-64-1.5.0.tar.gz -C /
+sudo tar -zxvf greengrass-ubuntu-x86-64-1.6.0.tar.gz -C /
 ```
 
 Copy your certificate and private key to the greengrass certificate folder.
@@ -231,7 +229,8 @@ Your configuration file needs to look like the following, notice we specify the 
        "cgroup": {
            "useSystemd": "yes"
        }
-   }
+   },
+"manageRespawn": false
 }
 ```
 
@@ -262,7 +261,8 @@ Your final config file should look something like this:
        "cgroup": {
            "useSystemd": "yes"
        }
-   }
+  },
+"manageRespawn": false
 }
 ```
 
