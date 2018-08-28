@@ -55,7 +55,10 @@ pip install jmespath
 pip install python-dateutil
 
 sudo  apt-get install python-opencv
+
 pip install opencv-python
+
+pip install boto3
 
 ```
 
