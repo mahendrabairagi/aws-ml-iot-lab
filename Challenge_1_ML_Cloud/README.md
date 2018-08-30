@@ -329,6 +329,8 @@ On your group management page, click on Deployments
 
 Click on Actions and Deploy
 
+Select – Automatically detect Core endpoints (recommended)
+
 Click next
 
 You should see deployment successfully completed
