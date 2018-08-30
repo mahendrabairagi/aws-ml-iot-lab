@@ -35,7 +35,7 @@ def greengrassSagemakerInference_run():
     vidcap=cv2.VideoCapture(0)
     vidcap.open(0)
     #this may be required if camera needs warm up.
-    sleep(1) 
+    time.sleep(1) 
     retval, image = vidcap.read()
     vidcap.release()
     image = cv2.resize(image, (300, 300))
