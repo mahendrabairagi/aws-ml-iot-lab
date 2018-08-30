@@ -119,7 +119,7 @@ The markdown blocks are just there to provide accompanying documentation to the 
 
 The ipython kernel keeps track of the state of the code ran so far, so it's important to run code blocks sequentially from the top-down so it can process in the correct order. When you run a code block, the "In" next to the block indicates the state of the kernel; it will either show a "\*" to indicate that the code block is still processing, or it will show an integer that shows the order in which the blocks were run since the notebook was launched. (These are already there by default).
 
-Please proceed to run each code block.
+Please proceed to run each code block. Please pay attention to code block in section 'Deploy' - you would need to replace the line - `bucket_name = "YOUR-BUCKET"`. The name "YOUR-BUCKET" would be replaced by a S3 bucket that you would create earlier in the notebook. 
 
 By the end of the notebook, you should have successfully launched a SageMaker endpoint that is running inference with a face detection model, and have sent a test image to the endpoint. The endpoint will have returned the detections, but it also will push the face crops to S3.
 
