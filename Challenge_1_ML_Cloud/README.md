@@ -302,8 +302,7 @@ cd /greengrass/ggc/core
 
 To make sure that your core is running and listening for messages on port 8883 enter:
 ```
-netstat –peanut
-look for 0.0.0.0:8883 
+netstat -peanut | grep -i 8883 
  ```
 
 The log files are located in /greengrass/ggc/var/log/system/*
