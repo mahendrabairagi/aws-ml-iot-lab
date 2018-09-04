@@ -34,7 +34,7 @@ You will repeat the steps in Challenge 1 where you created a Lambda function fro
 
 ![Alt text](../screenshots/deeplens_lambda_0.png)
 
-Next, you will replace the default function with the [inference-lambda.py] (https://github.com/mahendrabairagi/aws-ml-iot-lab/blob/master/Challenge_2_ML_Edge/inference-lambda.py) script under Challenge_2.
+Next, you will replace the default function with the [inference-lambda.py](https://github.com/mahendrabairagi/aws-ml-iot-lab/blob/master/Challenge_2_ML_Edge/inference-lambda.py) script under Challenge_2.
 
 **Note**: Be sure to replace "your bucket" with the name of the bucket you've been using thus far.
 
