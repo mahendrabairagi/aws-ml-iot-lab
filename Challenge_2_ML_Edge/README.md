@@ -36,6 +36,8 @@ You will repeat the steps in Challenge 1 where you created a Lambda function fro
 
 Next, you will replace the default function with the [inference-lambda.py](https://github.com/mahendrabairagi/aws-ml-iot-lab/blob/master/Challenge_2_ML_Edge/inference-lambda.py) script under Challenge_2.
 
+You can select the inference script, by selecting Raw in the Github page and choosing the script using ctrl+A/ cmd+A . Copy the script and paste it into the lambda function (make sure you delete the default code).
+
 **Note**: Be sure to replace "your bucket" with the name of the bucket you've been using thus far.
 
 
