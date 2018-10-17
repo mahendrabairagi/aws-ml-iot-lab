@@ -287,7 +287,7 @@ Lastly, we need to get a copy of the Root CA file for server identity verificati
 change directory to /greengrass/certs. Enter this on your device to obtain a copy of the certificate:
 
 ```
-sudo wget -O root-ca.pem  https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem
+sudo wget -O root.ca.pem https://www.symantec.com/content/en/us/enterprise/verisign/roots/VeriSign-Class%203-Public-Primary-Certification-Authority-G5.pem
 ```
 
 ### Step 7 - Starting the Greengrass core
